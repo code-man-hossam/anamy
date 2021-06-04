@@ -1,0 +1,64 @@
+.menu_section {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  background-color: $color-primary;
+  z-index: 1;
+  @include transition-ease;
+
+  & .close {
+    float: right;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    @include button(transparent);
+
+    & .fa-times {
+      font-size: 1.5rem;
+      color: $color-seondary;
+    }
+  }
+
+  & .links {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 2rem;
+    list-style: none;
+
+    & li {
+      width: 100%;
+      margin-bottom: 1.7rem;
+      padding: 0.7rem;
+      border-radius: 50px;
+      color: $color-seondary;
+
+      &.active {
+        background-color: $color-white;
+      }
+
+      & .fas {
+        color: $color-seondary;
+        margin-right: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+
+      & a {
+        text-decoration: none;
+        color: $color-seondary;
+        font-size: 1.2rem;
+        font-weight: 600;
+        @include transition-ease;
+
+        &:hover {
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+.menu_section.open {
+  transform: translateX(0);
+}

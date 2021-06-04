@@ -1,0 +1,131 @@
+.service {
+  width: 100%;
+  height: auto;
+  @include margCenter;
+  padding: 2rem;
+
+  & h1 {
+    color: $color-seondary;
+    margin-bottom: 1.5rem;
+  }
+
+  &__cols {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    & .col {
+      min-height: 10rem;
+      @include flexbox(initial, initial, column);
+      background-color: $color-primary;
+      border-radius: 10px;
+      overflow: hidden;
+
+      &__img {
+        width: 100%;
+        height: 80%;
+
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &__desc {
+        padding: 1rem;
+        @include flexbox(center, space-between, row);
+
+        & h3 {
+          color: $color-seondary;
+          letter-spacing: 1px;
+        }
+
+        & a {
+          color: $color-seondary;
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+}
+
+.products {
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  @include margCenter;
+  padding: 2rem;
+
+  & h1 {
+    color: $color-seondary;
+    margin-bottom: 1rem;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    @include margCenter;
+    @include flexbox(center, center, row);
+
+    & img {
+      width: 10rem;
+      height: 10rem;
+      object-fit: cover;
+    }
+  }
+
+  & .arrows {
+    width: 50%;
+    @include margCenter;
+    margin-top: 1rem;
+    @include flexbox(center, space-between, row);
+
+    &__btn {
+      padding: 0.7rem;
+      @include button(transparent);
+
+      & .fas {
+        color: $color-seondary;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@include media-md {
+  .service {
+    width: 80%;
+    & h1 {
+      font-size: 3rem;
+    }
+  }
+
+  .products {
+    width: 80%;
+
+    & h1 {
+      font-size: 3rem;
+    }
+
+    &__img {
+      width: 50%;
+      & img {
+        width: 25rem;
+        height: 20rem;
+      }
+    }
+
+    & .arrows {
+      width: 30%;
+
+      &__btn {
+        & .fas {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

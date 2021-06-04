@@ -1,0 +1,112 @@
+.intro {
+  width: 100%;
+  height: auto;
+  @include margCenter;
+  margin-top: 2rem;
+  padding: 1rem;
+  @include flexbox(center, center, column);
+
+  & h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 1px black;
+    color: $color-seondary;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+      -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+}
+
+.vision {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 2rem;
+  @include margCenter;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  &__col {
+    min-height: 10rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    @include transition-ease;
+
+    &:hover {
+      background-color: $color-primary;
+    }
+
+    &:hover > p {
+      color: $color-white;
+    }
+
+    & h1 {
+      color: $color-seondary;
+    }
+
+    & p {
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.goals {
+  width: 100%;
+  margin-top: 2rem;
+  @include margCenter;
+  padding: 2rem;
+
+  & h1 {
+    color: $color-seondary;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    & li {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@include media-md {
+  .intro {
+    width: 50%;
+
+    & h1 {
+      font-size: 6rem;
+    }
+
+    & h2 {
+      font-size: 3rem;
+    }
+  }
+
+  .vision {
+    width: 80%;
+
+    &__col {
+      & h1 {
+        font-size: 3rem;
+      }
+      & p {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .goals {
+    width: 80%;
+
+    & h1 {
+      font-size: 3rem;
+    }
+
+    &__list {
+      & li {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
