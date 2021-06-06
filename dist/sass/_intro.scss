@@ -7,12 +7,14 @@
   @include flexbox(center, center, column);
 
   & h1 {
-    font-size: 2.5rem;
+    font-size: $font-secondary;
     letter-spacing: 1px;
-    -webkit-text-stroke: 1px black;
     color: $color-seondary;
-    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
-      -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+
+  & h2 {
+    color: $color-comp;
+    font-size: $font-small;
   }
 }
 
@@ -34,18 +36,16 @@
     @include transition-ease;
 
     &:hover {
-      background-color: $color-primary;
-    }
-
-    &:hover > p {
-      color: $color-white;
+      background-color: $color-comp;
     }
 
     & h1 {
+      font-size: $font-secondary;
       color: $color-seondary;
     }
 
     & p {
+      font-size: $font-small;
       letter-spacing: 1px;
     }
   }
@@ -59,12 +59,13 @@
 
   & h1 {
     color: $color-seondary;
-    font-size: 2rem;
+    font-size: $font-secondary;
     margin-bottom: 1rem;
   }
 
   &__list {
     & li {
+      font-size: $font-small;
       margin-bottom: 1rem;
     }
   }
@@ -75,11 +76,11 @@
     width: 50%;
 
     & h1 {
-      font-size: 6rem;
+      font-size: $font-primary;
     }
 
     & h2 {
-      font-size: 3rem;
+      font-size: $font-secondary;
     }
   }
 
@@ -88,10 +89,10 @@
 
     &__col {
       & h1 {
-        font-size: 3rem;
+        font-size: $font-secondary;
       }
       & p {
-        font-size: 1.3rem;
+        font-size: $font-small;
       }
     }
   }
@@ -100,12 +101,12 @@
     width: 80%;
 
     & h1 {
-      font-size: 3rem;
+      font-size: $font-secondary;
     }
 
     &__list {
       & li {
-        font-size: 1.3rem;
+        font-size: $font-small;
       }
     }
   }

@@ -1,6 +1,11 @@
 $color-white: #fff;
-$color-primary: #000;
-$color-seondary: #98da14;
+$color-primary: #ccd3bf;
+$color-seondary: #225703;
+$color-comp: #bba95c;
+$font-primary: 3rem;
+$font-secondary: 1.2rem;
+$font-md: 2rem;
+$font-small: 1rem;
 
 @mixin flexbox($al, $jus, $dir) {
   display: flex;

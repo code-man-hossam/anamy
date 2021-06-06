@@ -15,7 +15,7 @@
     @include button(transparent);
 
     & .fa-times {
-      font-size: 1.5rem;
+      font-size: $font-secondary;
       color: $color-seondary;
     }
   }
@@ -40,14 +40,14 @@
       & .fas {
         color: $color-seondary;
         margin-right: 5px;
-        font-size: 1.2rem;
+        font-size: $font-secondary;
         cursor: pointer;
       }
 
       & a {
         text-decoration: none;
         color: $color-seondary;
-        font-size: 1.2rem;
+        font-size: $font-secondary;
         font-weight: 600;
         @include transition-ease;
 

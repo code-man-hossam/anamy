@@ -8,7 +8,7 @@
 
   &__intro {
     & h1 {
-      font-size: 2.5rem;
+      font-size: $font-md;
       letter-spacing: 1px;
       -webkit-text-stroke: 1px $color-primary;
       color: $color-seondary;
@@ -33,7 +33,7 @@
       }
 
       & .fa-paper-plane {
-        font-size: 1.1rem;
+        font-size: $font-secondary;
       }
     }
   }
@@ -52,9 +52,11 @@
 
       & li {
         margin-bottom: 1rem;
+        color: $color-comp;
+        font-size: $font-small;
 
         & i {
-          font-size: 1rem;
+          font-size: $font-small;
           margin-right: 1rem;
           cursor: pointer;
         }
@@ -74,10 +76,11 @@
 
         & a {
           text-decoration: none;
-          color: $color-primary;
+          font-size: $font-small;
+          color: $color-comp;
 
           & i {
-            font-size: 1rem;
+            font-size: $font-small;
             margin-right: 5px;
             cursor: pointer;
           }
@@ -96,7 +99,9 @@
     & p {
       font-family: sans-serif;
       margin-top: 10px;
+      font-weight: 700;
       font-size: 0.8rem;
+      color: $color-comp;
     }
   }
 }
@@ -104,7 +109,31 @@
 @include media-md {
   .footer__intro {
     & h1 {
-      font-size: 5rem;
+      font-size: $font-primary;
+    }
+  }
+
+  .footer__desc {
+    & .col1 {
+      & li {
+        font-size: $font-secondary;
+
+        & i {
+          font-size: $font-secondary;
+        }
+      }
+    }
+
+    & .col2 {
+      & li {
+        & a {
+          font-size: $font-secondary;
+
+          & i {
+            font-size: $font-secondary;
+          }
+        }
+      }
     }
   }
 }

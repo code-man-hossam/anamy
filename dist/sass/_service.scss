@@ -6,7 +6,8 @@
 
   & h1 {
     color: $color-seondary;
-    margin-bottom: 1.5rem;
+    margin-bottom: $font-secondary;
+    font-size: $font-secondary;
   }
 
   &__cols {
@@ -39,13 +40,14 @@
         @include flexbox(center, space-between, row);
 
         & h3 {
+          font-size: $font-secondary;
           color: $color-seondary;
           letter-spacing: 1px;
         }
 
         & a {
           color: $color-seondary;
-          font-size: 1.7rem;
+          font-size: $font-secondary;
         }
       }
     }
@@ -62,6 +64,7 @@
   & h1 {
     color: $color-seondary;
     margin-bottom: 1rem;
+    font-size: $font-secondary;
   }
 
   &__img {
@@ -89,7 +92,7 @@
 
       & .fas {
         color: $color-seondary;
-        font-size: 1.5rem;
+        font-size: $font-secondary;
       }
     }
   }
@@ -98,17 +101,10 @@
 @include media-md {
   .service {
     width: 80%;
-    & h1 {
-      font-size: 3rem;
-    }
   }
 
   .products {
     width: 80%;
-
-    & h1 {
-      font-size: 3rem;
-    }
 
     &__img {
       width: 50%;
@@ -120,12 +116,6 @@
 
     & .arrows {
       width: 30%;
-
-      &__btn {
-        & .fas {
-          font-size: 2rem;
-        }
-      }
     }
   }
 }

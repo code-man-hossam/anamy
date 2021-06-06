@@ -6,10 +6,12 @@
 @import './intro';
 @import './service';
 @import './footer';
+@import './about';
 
 body {
   font-family: 'Squada One', cursive;
   overflow-x: hidden;
+  background-color: $color-primary;
 }
 
 .nav {
@@ -29,8 +31,9 @@ body {
     @include flexbox(center, initial, row);
 
     & img {
-      width: 3.5rem;
+      width: 3rem;
       cursor: pointer;
+      object-fit: contain;
     }
   }
 
@@ -43,7 +46,7 @@ body {
 
       & .fa-bars {
         color: $color-primary;
-        font-size: 1.5rem;
+        font-size: $font-secondary;
       }
     }
   }
@@ -60,15 +63,21 @@ body {
 
       & li a {
         text-decoration: none;
-        color: $color-primary;
+        color: $color-comp;
         font-weight: bold;
-        font-size: 0.9rem;
+        font-size: $font-small;
+        letter-spacing: 1px;
+        @include transition-ease;
+
+        &:hover {
+          color: $color-primary;
+        }
       }
 
       & li .fas {
         color: $color-primary;
         margin-right: 5px;
-        font-size: 1rem;
+        font-size: $font-secondary;
         cursor: pointer;
       }
     }
@@ -102,9 +111,9 @@ body {
         border-radius: 50%;
         color: $color-seondary;
         font-size: 1.3rem;
-        border: 1px solid $color-seondary;
         font-family: 'Luckiest Guy', cursive;
         @include button($color-primary);
+        border: 1px solid $color-seondary;
       }
 
       & .letter1 {
