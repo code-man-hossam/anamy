@@ -9,6 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="shortcut icon" type="image/png" href="../assets/logo.png">
     <title>Anamy Group - for Multi Activities</title>
   </head>
   <body>
@@ -28,25 +29,74 @@
       <div class="nav__links">
         <ul>
           <li>
-            <i class="fas fa-home"></i>
-            <a href="../index.html">Home</a>
+            <a href="../index.html">
+              <i class="fas fa-home"></i>
+              Home
+            </a>
           </li>
           <li>
-            <i class="fas fa-address-card"></i>
-            <a href="./about.html">About Us</a>
+            <a href="./about.html">
+              <i class="fas fa-address-card"></i>
+              About Us
+            </a>
           </li>
           <li>
-            <i class="fas fa-clock"></i>
-            <a href="./services.html">Services</a>
+            <a href="./services.html">
+              <i class="fas fa-clock"></i>
+              Services
+            </a>
           </li>
           <li>
-            <i class="fas fa-phone-volume"></i>
-            <a href="#">Contact</a>
+            <a href="mailto:anamygroup2@gmail.com">
+              <i class="fas fa-envelope"></i>
+              Contact
+            </a>
           </li>
         </ul>
       </div>
     </nav>
     <!-- NAV SECTION END -->
+
+    <!-- SOCIAL SECTION -->
+    <div class="socials-container">
+      <button class="user-btn">A</button>
+      <div class="social-btns">
+        <button class="btn1">
+          <a href="#" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </button>
+        <button class="btn2">
+          <a href="#" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </button>
+
+        <button class="btn3">
+          <a
+            href="#"
+            target="_blank"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </button>
+
+        <button class="btn4">
+          <a href="#" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </button>
+      </div>
+      <div class="title">
+        <div class="title__holder">
+        <button class="holder__letter letter1">N</button>
+        <button class="holder__letter letter2">A</button>
+        <button class="holder__letter letter3">M</button>
+        <button class="holder__letter letter4">Y</button>
+        </div>
+      </div>
+    </div>
+    <!-- SOCIAL SECTION END -->
+
 
     <!-- MENU SECTION -->
     <div class="menu_section">
@@ -57,19 +107,19 @@
       <ul class="links">
         <li class="active">
           <i class="fas fa-home"></i>
-          <a href="#">Home</a>
+          <a href="../index.html">Home</a>
         </li>
         <li>
           <i class="fas fa-address-card"></i>
-          <a href="#">About Us</a>
+          <a href="./about.html">About Us</a>
         </li>
         <li>
           <i class="fas fa-clock"></i>
-          <a href="#">Services</a>
+          <a href="./services.html">Services</a>
         </li>
         <li>
-          <i class="fas fa-phone-volume"></i>
-          <a href="#">Contact</a>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:anamygroup2@gmail.com">Contact</a>
         </li>
       </ul>
     </div>
@@ -180,15 +230,98 @@
 
     <div class="serv__products">
         <h1>Products</h1>
-        <div class="products__scroll">
-            <div class="products">
+        <div class="products">
             <img src="../assets/pic1.jpg" alt="">
             <img src="../assets/pic2.jpg" alt="">
             <img src="../assets/pic3.jpg" alt="">
             <img src="../assets/pic4.jpg" alt="">
             <img src="../assets/pic5.jpg" alt="">
         </div>
-        </div>
     </div>
+
+     <!-- FOOTER SECTION -->
+    <footer class="footer">
+      <div class="footer__intro">
+        <h1>What's Next?</h1>
+        <a href="mailto:anamygroup2@gmail.com.com"" class="contact">
+          reach out
+          <i class="fas fa-paper-plane"></i>
+        </a>
+      </div>
+      <div class="footer__desc">
+          <ul class="col1">
+            <li>
+              <i class="fas fa-map-marked-alt"></i>
+              The Arab Market, South of China Al-Qandoul – Wad Elias Building, 3rd Floor, Office No(1)- Khartoum - Sudan-11111
+            </li>
+            <li>
+              <i class="fas fa-phone-square-alt"></i>
+              +249-183766926
+            </li>
+            <li>
+              <i class="fab fa-envira"></i>
+              anamygroup2@gmail.com
+            </li>
+          </ul>
+
+          <ul class="col2">
+            <li>
+              <a href="#">
+                <i class="fab fa-facebook"></i>
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+                Instagram
+              </a>
+            </li>
+            <li>
+             <a href="#">
+               <i class="fab fa-linkedin-in"></i>
+                LinkedIn
+             </a>
+            </li>
+          </ul>
+      </div>
+      <div class="footer__copy">
+        <p>&COPY; ALLRIGHTS RESERVED, ANAMY 2021</p>
+      </div>
+    </footer>
+
+    <script>
+      const openBtn = document.querySelector('.open_menu_btn')
+      const closeBtn = document.querySelector('.close')
+      const menu = document.querySelector('.menu_section')
+
+      openBtn.addEventListener('click', () => {
+        menu.classList.add('open')
+      })
+
+      closeBtn.addEventListener('click', () => {
+        menu.classList.remove('open')
+      })
+
+      const socialBtn = document.querySelector('.user-btn')
+      const btns = document.querySelectorAll('.social-btns button')
+      const titleBtns = document.querySelectorAll('.holder__letter')
+
+        socialBtn.addEventListener('click', () => {
+        btns.forEach((btn) => {
+        btn.classList.toggle('show')
+        })
+
+        titleBtns.forEach((btn) => {
+            btn.classList.toggle('show')
+        })
+        })
+    </script>
   </body>
 </html>

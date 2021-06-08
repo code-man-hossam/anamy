@@ -42,21 +42,32 @@ const products = [
 const openBtn = document.querySelector('.open_menu_btn')
 const closeBtn = document.querySelector('.close')
 const menu = document.querySelector('.menu_section')
-const hero = document.getElementById('hero')
-const heroTitle = document.getElementById('title')
-const heroText = document.getElementById('text')
+const hero = document.querySelector('.hero')
+
+let heroIndex = 0
+document.addEventListener('DOMContentLoaded', heroChanger)
 
 function heroChanger() {
-  let rand = Math.floor(Math.random() * heroData.length)
+  if (heroIndex < 0) heroIndex = heroData.length - 1
+  if (heroIndex > heroData.length - 1) heroIndex = 0
 
-  let text = heroData[rand].text
-
-  hero.src = heroData[rand].img
-  heroTitle.innerHTML = heroData[rand].title
-  heroText.innerHTML = `${text.slice(
-    0,
-    70
-  )}... <a href="#" class="read_more">read more</a> `
+  const { img, title, text } = heroData[heroIndex]
+  hero.innerHTML = `<div class="hero__overlay"></div>
+      <img src=${img} class="hero__img" id="hero" alt="hero" />
+      <div class="hero__title">
+        <h1>Anamy Group</h1>
+        <h2>Multi Activities Co.Ltd.</h2>
+      </div>
+      <div class="hero__text">
+        <h2 id="title">${title}</h2>
+        <p id="text">
+          ${text.slice(
+            0,
+            75
+          )}...<a href="./pages/services.html" class='read_more'>read more</a>
+        </p>
+      </div>`
+  heroIndex++
 }
 
 setInterval(heroChanger, 5000)
@@ -84,7 +95,7 @@ function displayServices() {
           </div>
           <div class="col__desc">
             <h3>${title}</h3>
-            <a href="#"><i class="fas fa-hand-point-right"></i></a>
+            <a href="./pages/services.html"><i class="fas fa-hand-point-right"></i></a>
           </div>
         </div>`
     })

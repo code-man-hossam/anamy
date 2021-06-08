@@ -1,11 +1,14 @@
 $color-white: #fff;
-$color-primary: #ccd3bf;
-$color-seondary: #225703;
-$color-comp: #bba95c;
+$color-primary: #dfb78c;
+$color-seondary: #49281a;
+$color-comp: #ab6832;
 $font-primary: 3rem;
 $font-secondary: 1.2rem;
 $font-md: 2rem;
 $font-small: 1rem;
+// $color-seondary: #225703;
+// $color-comp: #bba95c;
+// $color-primary: #ccd3bf;
 
 @mixin flexbox($al, $jus, $dir) {
   display: flex;

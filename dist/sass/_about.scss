@@ -86,20 +86,16 @@
     font-size: $font-secondary;
   }
 
-  & .products__scroll {
-    width: 100vw;
+  & .products {
+    width: 100%;
+    height: auto;
+    @include flexbox(center, space-between, row);
+    overflow-x: scroll;
 
-    & .products {
-      width: 50rem;
-      height: auto;
-      @include flexbox(center, space-between, row);
-      overflow-x: scroll;
-
-      & img {
-        width: 10rem;
-        max-height: 15rem;
-        margin-right: 1rem;
-      }
+    & img {
+      width: 10rem;
+      max-height: 15rem;
+      margin-right: 1rem;
     }
   }
 }
@@ -146,15 +142,16 @@
   .serv__products {
     width: 80%;
 
-    & .products__scroll {
+    & .products {
       width: 100%;
-      & .products {
-        width: 100%;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      overflow-x: initial;
 
-        & img {
-          width: 15rem;
-          max-height: 15rem;
-        }
+      & img {
+        width: 15rem;
+        max-height: 15rem;
       }
     }
   }
