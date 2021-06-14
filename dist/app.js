@@ -30,7 +30,6 @@ const heroData = [
     text: 'SOUSA for Import and Export (sousa) is a Tunisian coastal city in North Africa through which we aim to export all Sudanese products to various countries of the world and introduce them in the form of finished',
   },
 ]
-
 const products = [
   './assets/pic1.jpg',
   './assets/pic2.jpg',
@@ -38,11 +37,13 @@ const products = [
   './assets/pic4.jpg',
   './assets/pic5.jpg',
 ]
-
 const openBtn = document.querySelector('.open_menu_btn')
 const closeBtn = document.querySelector('.close')
 const menu = document.querySelector('.menu_section')
 const hero = document.querySelector('.hero')
+const socialBtn = document.querySelector('.user-btn')
+const btns = document.querySelectorAll('.social-btns button')
+const titleBtns = document.querySelectorAll('.holder__letter')
 
 let heroIndex = 0
 document.addEventListener('DOMContentLoaded', heroChanger)
@@ -119,10 +120,6 @@ document.getElementById('rightBtn').addEventListener('click', () => {
   }
   document.getElementById('product').src = products[index]
 })
-
-const socialBtn = document.querySelector('.user-btn')
-const btns = document.querySelectorAll('.social-btns button')
-const titleBtns = document.querySelectorAll('.holder__letter')
 
 socialBtn.addEventListener('click', () => {
   btns.forEach((btn) => {
